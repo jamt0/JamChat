@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class View extends StatelessWidget {
   final String title;
 
@@ -19,7 +19,7 @@ class View extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, '/signIn');
               },
-              child: Text('SigIn'),
+              child: Text(AppLocalizations.of(context)!.helloWorld),
             ),
           ],
         ),
