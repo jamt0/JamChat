@@ -11,19 +11,51 @@ class View extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
-      body: Center(
-        child: Column(
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Expanded(child: Text('hola')),
+              Fotter(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Fotter extends StatelessWidget {
+  const Fotter({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        ElevatedButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/signIn');
+          },
+          child: Text(AppLocalizations.of(context)!.signUp),
+        ),
+        Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            ElevatedButton(
+          children: [
+            Text(AppLocalizations.of(context)!.haveACount),
+            TextButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/signIn');
               },
-              child: Text(AppLocalizations.of(context)!.helloWorld),
+              child: Text(AppLocalizations.of(context)!.signIn),
             ),
           ],
         ),
-      ),
+      ],
     );
   }
 }

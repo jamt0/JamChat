@@ -1,7 +1,6 @@
 {
-  "title": "JamasdChat",
-  "helloWorld": "Hello World!!!!",
-  "@helloWorld": {
-    "description": "The conventional newborn programmer greeting"
-  }
+  "nameApp": "JamCasdhat",
+  "signIn": "SignIn",
+  "signUp": "SignUp",
+  "haveACount": "Have an account?"
 }

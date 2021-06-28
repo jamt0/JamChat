@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'pages/Home/index.dart';
-import 'pages/SignIn/index.dart';
-
+import 'package:jam_chat/src/pages/index.dart';
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -14,7 +12,9 @@ class MyApp extends StatelessWidget {
       home: Home(),
       routes: {
         '/signIn': (context) => SignIn(),
+        '/signUp': (context) => SignUp(),
       },
+      debugShowCheckedModeBanner: false,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
     );

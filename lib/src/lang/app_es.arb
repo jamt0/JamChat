@@ -1,4 +1,6 @@
 {
-  "title": "JamCasdhat",
-  "helloWorld": "Hola Mundo!"
+  "nameApp": "JamCasdhat",
+  "signIn": "SignIn",
+  "signUp": "SignUp",
+  "haveACount": "¿Tienes una cuenta?"
 }
