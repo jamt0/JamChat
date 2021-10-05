@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:introduction_screen/introduction_screen.dart';
+
 class View extends StatelessWidget {
   final String title;
 
@@ -7,22 +9,38 @@ class View extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Expanded(child: Text('hola')),
-              Fotter(),
-            ],
+    return IntroductionScreen(
+      pages: [
+        PageViewModel(
+          title: AppLocalizations.of(context)!.title1,
+          body: AppLocalizations.of(context)!.description1,
+          image: Center(
+            child:
+                Image.network("https://image.freepik.com/vector-gratis/personajes-diseno-plano-chateando-aplicacion-citas_23-2148271380.jpg", height: 175.0),
           ),
         ),
-      ),
+        PageViewModel(
+          title: AppLocalizations.of(context)!.title2,
+          body: AppLocalizations.of(context)!.description2,
+          image: Center(
+            child:
+                Image.network("https://image.freepik.com/vector-gratis/personajes-diseno-plano-chateando-aplicacion-citas_23-2148271380.jpg", height: 175.0),
+          ),
+        ),
+        PageViewModel(
+          title: AppLocalizations.of(context)!.title3,
+          body: AppLocalizations.of(context)!.description3,
+          image: Center(
+            child:
+                Image.network("https://image.freepik.com/vector-gratis/personajes-diseno-plano-chateando-aplicacion-citas_23-2148271380.jpg", height: 175.0),
+          ),
+          footer: Fotter()
+        )
+      ],
+      showSkipButton: true,
+      showDoneButton: false,
+      skip: const Text("Skip"),
+      next: const Text("Next", style: TextStyle(fontWeight: FontWeight.w600)),
     );
   }
 }
@@ -39,7 +57,7 @@ class Fotter extends StatelessWidget {
       children: <Widget>[
         ElevatedButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/signIn');
+            Navigator.pushNamed(context, '/signUp');
           },
           child: Text(AppLocalizations.of(context)!.signUp),
         ),

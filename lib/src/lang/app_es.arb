@@ -2,5 +2,13 @@
   "nameApp": "JamCasdhat",
   "signIn": "SignIn",
   "signUp": "SignUp",
-  "haveACount": "¿Tienes una cuenta?"
+  "haveACount": "¿Tienes una cuenta?",
+  "skip": "Omitir",
+  "next": "Siguiente",
+  "title1": "Fácil acceso",
+  "description1": "Crea una cuenta sin ingresar correo electrónico o número telefónico.",
+  "title2": "Anónimo",
+  "description2": "No guardamos ningun mensaje en nuestras bases de datos.",
+  "title3": "Seguro",
+  "description3": "Los mensajes se cifran de extremos."
 }

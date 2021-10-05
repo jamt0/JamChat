@@ -1,6 +1,14 @@
 {
-  "nameApp": "JamCasdhat",
+  "nameApp": "JamChat",
   "signIn": "SignIn",
   "signUp": "SignUp",
-  "haveACount": "Have an account?"
+  "haveACount": "Have an account?",
+  "skip": "Skip",
+  "next": "Next",
+  "title1": "Easy access",
+  "description1": "Create an account without entering email or phone number.",
+  "title2": "Anonymous",
+  "description2": "We do not store any messages in our databases.",
+  "title3": "Secure",
+  "description3": "Messages are end-encrypted."
 }

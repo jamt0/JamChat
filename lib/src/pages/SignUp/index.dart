@@ -8,10 +8,14 @@ class SignUp extends StatefulWidget {
 
 class _SignUpState extends State<SignUp> {
 
-  String title = "SignUp";
+  String _title = "SignUp";
+
+  void _onSubmit () {
+
+  }
 
   @override
   Widget build(BuildContext context) {
-    return View(title: title);
+    return View(title: _title, onSubmit: _onSubmit);
   }
 }
